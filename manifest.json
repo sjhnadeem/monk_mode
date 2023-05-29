@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Monk Mode",
+    "description": "Block distracting websites. The war on attention has started.",
+    "version": "0.0.1",
+    "author": "Syed Jafor",
+    "icons": {
+      "16": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    },
+    "permissions": [
+      "storage"
+    ],
+    "content_scripts": [{
+      "matches": [ "https://*.facebook.com/*",
+        "https://*.instagram.com/*", 
+        "https://*.tiktok.com/*", 
+        "https://*.9gag.com/*", 
+        "https://*.reddit.com/*", 
+        "https://*.4chan.org/*"
+      ],
+      "js": ["content-script.js"]
+    }]
+  }
